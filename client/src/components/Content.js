@@ -9,7 +9,7 @@ const Content = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const url = "https://ip-collect.netlify.app/ip/generate";
+    const url = "https://localhost:3001/ip/generate";
 
     axios
       .post(url, { originalUrl })
