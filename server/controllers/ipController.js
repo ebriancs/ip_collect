@@ -3,12 +3,13 @@ const requestIp = require("request-ip");
 const Ip = require("../models/ipModel");
 
 const port = process.env.PORT || 3001;
+const domain = process.env.DOMAIN;
 
 const ipController = {
   generateUrl: (req, res) => {
     const { originalUrl } = req.body;
     const urlId = Math.random().toString(32).substring(2, 8);
-    const generatedUrl = `http://localhost:${port}/ip/${urlId}`;
+    const generatedUrl = `${domain}:${port}/ip/${urlId}`;
 
     const ipData = new Ip({
       urlId: urlId,
