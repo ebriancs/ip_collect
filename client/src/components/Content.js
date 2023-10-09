@@ -9,7 +9,7 @@ const Content = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const url = "https://localhost:3001/ip/generate";
+    const url = "http://localhost:3001/ip/generate";
 
     axios
       .post(url, { originalUrl })
